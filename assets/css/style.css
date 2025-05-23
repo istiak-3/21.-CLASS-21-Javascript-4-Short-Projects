@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --section-background: #EFF0F5;
+    --container-background: #fff;
+    --shifting-button-color: #cf650e;
+    --shifting-button-background: #fff;
+    --shifting-button-outline: #cf650e;
+
+    --count-purchase-h4-color: rgb(58, 57, 57);
+    --count-purchase-p-color: #aca8a9dc;
+    --count-purchase-p_in-stock-color: #fff;
+    --count-purchase-p_in-stock-background: #57e2aa;
+    --count-purchase-p_in-stock-outline: transparent;
+    --count-quantity-color: rgb(58, 57, 57);
+    --count-price_color: #44aa81;
+    --count-order-button_color: #fff;
+    --count-order-button_background: #44aa81;
+    --count-order-button_outline: transparent;
+
+    
+    --qrsec-form-background: #39BABD;
+    --qrsec-input-background: #fff;
+    --qrsec-button-color: #fff;
+    --qrsec-button-background: #18d687;
+    --qrsec-button_hover-color: #fff;
+    --qrsec-button_hover-background: #18d687d5;
+    --qrsec-image_background: #00ffb37e;
+    --qrsec-image_shadow-background: #009DB6;
+    
+}
+
+
+
+body.dark-mode {
+    --section-background: #1C1C1D;
+    --container-background: #252728;
+    --shifting-button-color: #fff;
+    --shifting-button-background: #5f5f61;
+    --shifting-button-outline: transparent;
+
+    
+    --count-purchase-h4-color: #eeeeee;
+    --count-purchase-p-color: #aca8a9dc;
+    --count-purchase-p_in-stock-color: #fff;
+    --count-purchase-p_in-stock-background: #57e2aae0;
+    --count-purchase-p_in-stock-outline: transparent;
+    --count-quantity-color: rgb(231, 228, 228);
+    --count-price_color: #44aa81;
+    --count-order-button_color: #fff;
+    --count-order-button_background: #44aa81;
+    --count-order-button_outline: transparent;
+
+
+    --qrsec-form-background: #b239bd;
+    --qrsec-input-background: #fff;
+    --qrsec-button-color: #fff;
+    --qrsec-button-background: #7e17df7e;
+    --qrsec-button_hover-color: #fff;
+    --qrsec-button_hover-background: #18d687d5;
+    --qrsec-image_background: #8400ff7e;
+    --qrsec-image_shadow-background: #9200b6;
+
+}
+
+
+
+.container {
+    margin: auto;
+    width: 1152px;
+    background: var(--container-background);
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    background: var(--section-background);
+    padding: 30px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+/*-- ========== Common CSS END ==================== --*/
+
+
+
+/*-- ========== COLOR SHIFT SECTION ==================== --*/
+
+#color_shifting .container {
+    background: var(--section-background);
+}
+
+
+
+#color_shifting .row {
+    justify-content: right;
+}
+
+
+/* #color_shifting .row  .mode_button{
+    border: none;
+    outline: 1px solid transparent;
+    padding: 18px 15px;
+    background: #000;
+    border-radius: 20px;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    line-height: 0;
+    margin-right: 20px;
+} */
+
+
+#color_shifting .row .mode_button {
+    border: none;
+    outline: 1px solid var(--shifting-button-outline);
+    padding: 18px 15px;
+    background: var(--shifting-button-background);
+    border-radius: 20px;
+    color: var(--shifting-button-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 11px;
+    line-height: 0;
+    margin-right: 20px;
+}
+
+
+
+
+/*-- ========== COUNTING SECTION ==================== --*/
+
+#counting_purchase h4 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--count-purchase-h4-color);
+}
+
+
+
+#counting_purchase p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400px;
+    color: var(--count-purchase-p-color);
+}
+
+
+#counting_purchase .c_contains h4 {
+    /* font-size: 36px; */
+    font-weight: 550;
+    line-height: 133%;
+    color: var(--count-purchase-h4-color);
+}
+
+#counting_purchase .c_contains .rating_row p:last-of-type {
+    font-size: 12px;
+    color: var(--count-purchase-p_in-stock-color);
+    padding: 4px 12px;
+    background: var(--count-purchase-p_in-stock-background);
+    border-radius: 20px;
+    outline: 1px solid var(--count-purchase-p_in-stock-outline);
+}
+
+#counting_purchase .c_contains .price_row h4 {
+    font-size: 28px;
+    color: var(--count-price_color);
+    margin-left: 30px;
+}
+
+
+
+
+
+#counting_purchase .c_contains .quantity_row .count p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 300px;
+    color: #aca8a9dc;
+    margin-left: 25px;
+}
+
+#counting_purchase .c_contains .quantity_row .decrement {
+    display: inline-flex;
+    align-items: center;
+    background: #f5f1f37d;
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    line-height: 0;
+    color: #00000091;
+    cursor: not-allowed;
+}
+
+
+
+#counting_purchase .c_contains .quantity_row h5 {
+    font-family: "Public Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--count-quantity-color);
+    margin: 0 20px;
+}
+
+
+
+#counting_purchase .c_contains .quantity_row .increment {
+    display: inline-flex;
+    align-items: center;
+    background: #f0edefb6;
+    padding: 8px;
+    border-radius: 50%;
+    border: none;
+    line-height: 0;
+    color: #000000ef;
+    cursor: pointer;
+}
+
+
+#counting_purchase .c_contains .t_price_row h4 {
+    font-size: 28px;
+    color: var(--count-price_color);
+    margin-left: 30px;
+}
+
+
+#counting_purchase .c_contains .order_now a {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--count-order-button_background);
+    color: var(--count-order-button_color);
+    outline: 1px solid var(--count-order-button_outline);
+}
+
+#counting_purchase .c_contains .order_now a:hover {
+    transition: 0.3s;
+    background: transparent;
+    outline: 1px solid var(--count-order-button_background);
+    color: var(--count-order-button_background);
+}
+
+
+
+
+/*-- ========== QR SECTION ==================== --*/
+
+
+
+
+#qr_sec .form_row {
+    background: var(--qrsec-form-background);
+    padding: 60px 0;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+
+#qr_sec .user_input {
+    justify-content: center;
+}
+
+#qr_sec .user_input input {
+    padding: 20px 15px;
+    border: none;
+    outline: none;
+    width: 17%;
+    border-radius: 20px 0 0 20px;
+    background: var(--qrsec-input-background);
+    /* box-shadow: 0 3px 3px 2px #009DB6; */
+}
+
+
+#qr_sec .user_input button {
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: var(--qrsec-button-background);
+    color: var(--qrsec-button-color);
+    border-radius: 0 15px 15px 0;
+    /* box-shadow: 0 3px 3px 2px #009DB6; */
+    font-size: 13px;
+    font-weight: medium;
+    font-family: "Lato", sans-serif;
+}
+
+#qr_sec .user_input button:hover {
+    transition: 0.2s ease-in-out;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: var(--qrsec-button_hover-background);
+    color: var(--qrsec-button_hover-color);
+}
+
+
+
+#qr_sec .image {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+
+#qr_sec .image img {
+    width: 12%;
+    height: 12%;
+    padding: 10px;
+    background: var(--qrsec-image_background);
+}
+
+#qr_sec .image .shadow {
+    height: 375px;
+    width: 282px;
+    background: var(--qrsec-image_shadow-background);
+    position: absolute;
+    right: 562px;
+    top: 45px;
+    transform: rotate(135deg);
+    z-index: -1;
+}
+
+#qr_sec .qr_input::placeholder {
+    font-size: 14px;
+    font-weight: 500;
+    color: #a8a3a4;
+}
